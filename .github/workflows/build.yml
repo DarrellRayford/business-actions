@@ -5,15 +5,14 @@ on:
     branches: [ main ]
 
 jobs:
-
- test: 
-  name: Test 
-  runs-ons: ubuntu-latest
+  test: 
+    name: Test 
+    runs-ons: ubuntu-latest
 
 steps: 
   - uses: actions/checkout@v3
   - uses: actions/setup-node@v3
     with:
       node-version: 16.x
-    -run: node ci
+    -run: npm ci
     -run: npm test
